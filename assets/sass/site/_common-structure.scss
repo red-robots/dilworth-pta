@@ -1,0 +1,197 @@
+
+div {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1200px;
+		padding: 0px;
+	}
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.logo , h1.logo {
+	width: 195px;
+	height: 200px;
+	// background-image: url(images/logo.png);	
+	z-index: 1000;
+	margin: 10px auto 10px auto;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		width: 195px;
+		height: 200px;
+		z-index: 1000;
+		margin: 40px auto 10px auto;
+		position: relative;
+	}
+
+}
+.logo a, h1.logo a{
+	width: 195px;
+	height: 200px;
+	display: block;
+	text-indent: -9000px;
+	@media screen and (min-width: $tabwidth) {
+		width: 195px;
+		height: 200px;
+		display: block;
+		text-indent: -9000px;
+	}
+}
+
+/* Header 
+-------------------------------------------------------------- */
+#header {
+	width: 100%;
+	float:left;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		width: 1200px;
+		float:left;
+		// height:250px;
+		position: relative;
+	}
+
+}
+#sociallinks {
+	width:110px;
+	position: absolute;
+	top: 45px;
+	right: 20px;
+	z-index: 6;	
+	@media screen and (min-width: $tabwidth) {
+		right: 60px;
+	}
+	
+}
+
+#sociallinks  ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	z-index: 2;
+	position: relative;
+}
+#sociallinks  ul li {
+	float: left;
+	position: relative;
+	margin: 0px 5px;
+}
+#sociallinks  ul a {
+	
+	text-decoration: none;
+	background-image: url(images/social.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 45px;
+	text-indent: -9000px;
+	position: relative;
+}
+#sociallinks  .facebook a {
+	width:45px;
+	background-position: -44px -0px;
+	position: relative;
+	
+}
+#sociallinks .facebook a:hover {
+	background-position: -44px -0px;
+	
+}
+#sociallinks  .twitter a {
+	width:45px;
+	background-position: -0px 0px;
+	position: relative;
+	
+}
+#sociallinks  .twitter a:hover {
+	background-position: -0px -0px;
+	
+}
+.gce-page-list .gce-list .gce-list-event {
+	padding: 5px;	
+}
+/* Page structure */
+
+#main {
+	width: 100%;
+	margin: 20px auto;
+	overflow: hidden;
+	background-color:#fff;
+	@media screen and (min-width: $tabwidth) {
+		width: 1200px;
+		margin: 20px auto;
+		min-height: 700px;
+	}
+}
+/* Footer */
+#footer {
+	width: 100%;
+	overflow:hidden;
+	text-align: center;
+	color: #BDBDAC;
+	font-size: 14px;
+	padding: 10px 0 20px 0;	
+}
+.site-info {
+	width: 950px;
+	margin: 0px auto;
+	padding: 10px;
+	text-align: center;
+	color: #fff;	
+}
+.site-info p {
+	margin: 5px 0px;
+	font-size:14px;	
+}
+#footer a {
+	text-decoration: none;	
+}
