@@ -51,11 +51,11 @@
     <div id="header">
     
     <div id="sociallinks">
-           	<ul>
-            		<li class="facebook"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
-                    <li class="twitter"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
-            	</ul>
-           </div><!-- sociallinks -->
+        <ul>
+        	<li class="facebook"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
+            <li class="twitter"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
+        </ul>
+    </div><!-- sociallinks -->
     
     
     	 <?php if(is_home()) { ?>
@@ -64,12 +64,11 @@
             <div class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></div>
         <?php } ?>
     
-    
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-        
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+   
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+		  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?>    </button>
+           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+        </nav>
 
 	</div><!-- header -->
     

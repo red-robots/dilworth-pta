@@ -1,14 +1,13 @@
-
+/* Body, links, basics */
+html {
+	
+}
+body {
+ 	font-family: "Open Sans",sans-serif;
+}
 div {
 	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
 
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
 
 	/* Adds a hyphen where the word breaks, if supported (No Blink) */
 	-ms-hyphens: auto;
@@ -16,17 +15,18 @@ div {
 	-webkit-hyphens: auto;
 	hyphens: auto;
 }
+a {text-decoration: none;}
 .clear {clear: both;}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
-	padding: 20px;
+	padding: 0;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 100%;
+		width: 90%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		
 		padding: 0px;
 	}
 }
@@ -60,31 +60,42 @@ div {
 }
 
 .logo , h1.logo {
-	width: 195px;
-	height: 200px;
-	// background-image: url(images/logo.png);	
+	width: 160px;
+	height: 188px;
+	background: {
+		image: url(images/logo.png);
+		size: cover;
+	}	
 	z-index: 1000;
 	margin: 10px auto 10px auto;
 	position: relative;
 	@media screen and (min-width: $tabwidth) {
-		width: 195px;
-		height: 200px;
+		width: 100px;
+		height: 117px;
 		z-index: 1000;
 		margin: 40px auto 10px auto;
 		position: relative;
 	}
+	@media screen and (min-width: $deskwidth) {
+		width: 160px;
+		height: 188px;
+	}
 
 }
 .logo a, h1.logo a{
-	width: 195px;
-	height: 200px;
+	width: 160px;
+	height: 188px;
 	display: block;
 	text-indent: -9000px;
 	@media screen and (min-width: $tabwidth) {
-		width: 195px;
-		height: 200px;
+		width: 100px;
+		height: 117px;
 		display: block;
 		text-indent: -9000px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 160px;
+		height: 188px;
 	}
 }
 
@@ -95,7 +106,7 @@ div {
 	float:left;
 	position: relative;
 	@media screen and (min-width: $tabwidth) {
-		width: 1200px;
+		
 		float:left;
 		// height:250px;
 		position: relative;
@@ -104,12 +115,12 @@ div {
 }
 #sociallinks {
 	width:110px;
-	position: absolute;
-	top: 45px;
-	right: 20px;
+	position: relative;
+	float: right;
 	z-index: 6;	
+	margin: 0 20px 0;
 	@media screen and (min-width: $tabwidth) {
-		right: 60px;
+	
 	}
 	
 }
@@ -167,8 +178,8 @@ div {
 	overflow: hidden;
 	background-color:#fff;
 	@media screen and (min-width: $tabwidth) {
-		width: 1200px;
-		margin: 20px auto;
+		
+		margin: 0px auto;
 		min-height: 700px;
 	}
 }
@@ -182,7 +193,7 @@ div {
 	padding: 10px 0 20px 0;	
 }
 .site-info {
-	width: 950px;
+	width: 100%;
 	margin: 0px auto;
 	padding: 10px;
 	text-align: center;

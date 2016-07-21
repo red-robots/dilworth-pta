@@ -3,9 +3,23 @@
 	display: block;
 	text-align: center;
 	width: 100%;
+	background-color: $color-green;
 
 	@media screen and (min-width: $tabwidth) {
-
+		min-height: 50px;
+		margin: 50px 0 0 0;
+	}
+	@media screen and (min-width: $midwidth) {
+		min-height: 70px;
+		margin: -100px 0 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		min-height: 85px;
+		margin: -150px 0 0 0;
+	}
+	@media screen and (min-width: $largewidth) {
+		min-height: 85px;
+		margin: -150px 0 0 0;
 	}
 
 	ul {
@@ -13,14 +27,25 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		background-color: $color-green;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: $color-green;
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 3.5em;
 			left: -999em;
 			z-index: 99999;
+			width: 200px;
+			@media screen and (min-width: $midwidth) {
+				top: 4.6em;
+			}
+			@media screen and (min-width: $deskwidth) {
+				top: 5.3em;
+			}
+			@media screen and (min-width: $largewidth) {
+				top: 5.3em;
+			}
 
 			ul {
 				left: -999em;
@@ -28,6 +53,10 @@
 			}
 
 			li {
+				width: 100%;
+				margin: 0;
+				line-height: 3;
+				text-align: left;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -35,19 +64,19 @@
 			}
 
 			a {
-				width: 200px;
+			
 				display: block;
 				font-size: 12px;
-				padding: 5px ;
-				width: auto;
+				padding: 5px 15px;
+				width: 100%;
 				white-space: normal;
 				text-decoration:none;
-				color: #7faaef;
+				// color: #7faaef;
 			}
 
 			:hover > a,
 			.focus > a {
-				color: #21759b;
+				background-color: $color-dark-green;
 			}
 
 			a:hover,
@@ -64,21 +93,49 @@
 		float: left;
 		position: relative;
 		font-size: 16px;
-		line-height: 1.42857143;
+		line-height: 5.2857143;
+
+		
 
 		@media screen and (min-width: $tabwidth) {
-
+			margin: 0 5px;
+			font-size: 12px;
+			line-height: 2.2857143;
+		}
+		@media screen and (min-width: $midwidth) {
+			margin: 0 15px;
+			font-size: 15px;
+			line-height: 3.2857143;
+		}
+		@media screen and (min-width: $deskwidth) {
+			margin: 0 20px;
+			font-size: 16px;
+			line-height: 4.0;
+		}
+		@media screen and (min-width: $largewidth) {
+			margin: 0 30px;
+			font-size: 16px;
+			line-height: 4.0;
 		}
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
+	li:nth-child(4n) {
+		float: right;
+	}
+	li:nth-child(5n) {
+		float: right;
+	}
+	li:nth-child(6n) {
+		float: right;
+	}
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 10px;
-		color: #5172B2;
+		padding: 10px ;
+		color: #fff;
 	}
 
 	.current_page_item > a,
@@ -92,6 +149,7 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	overflow: hidden;
 	// background-color: $color-green;
 	ul.sub-menu {
 		background-color: rgba(255,255,255,.1);
@@ -100,7 +158,7 @@
 }
 
 
-@media screen and (min-width: $tabwidth) {
+@media screen and (min-width: $midwidth) {
 	.menu-toggle {
 		display: none;
 	}
@@ -109,9 +167,12 @@
 	}
 }
 button.menu-toggle {
-	border: 0px;
+	border: 1px solid #fff;
 	text-shadow: none;
-	// background-color: $color-green;
+	background: {
+		color: $color-green;
+		image: none;
+	}
 	color: #fff;
 	box-shadow: none;
 	width: auto;
@@ -125,7 +186,7 @@ button.menu-toggle {
 		size: 20px;
 	}
 	
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $midwidth) {
 		display: none;
 	}
 }

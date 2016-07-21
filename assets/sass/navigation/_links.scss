@@ -1,4 +1,4 @@
-$color__link : #0999F3;
+$color__link : $color-green;
 a {
 	color: $color__link;
 
@@ -8,7 +8,7 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color-dark-green;
 	}
 	&:focus {
 		outline: thin dotted;

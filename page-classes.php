@@ -8,12 +8,10 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-
-    <div class="page-content">
+<div class="wrapper">
+    <section class="page-content">
     	
-		 
-       
-        <div class="page-left">   
+		 <div class="page-left">   
             <div class="entry-content">
                 <h1><?php the_title(); ?></h1>
                 
@@ -75,8 +73,8 @@ get_header(); ?>
         
         <?php get_sidebar(); ?>  
         
-    </div><!-- page-content -->
+    </section><!-- page-content -->
     
-
+</div><!-- wrapper -->
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

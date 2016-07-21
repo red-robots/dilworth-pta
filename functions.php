@@ -9,30 +9,23 @@
 		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, '2.1.0', true);
 		wp_enqueue_script('jquery');
 		
-		// Custom Theme scripts...
-		wp_register_script(
-			'custom',
-			get_bloginfo('template_directory') . '/js/custom.js',
-			array('jquery') );
-		wp_enqueue_script('custom');
 		
-		
-		// Custom Theme scripts...
-		wp_register_script(
-			'flexslider',
-			get_bloginfo('template_directory') . '/js/flexslider.js',
-			array('jquery') );
-		wp_enqueue_script('flexslider');
-		
-		
-		// Custom Theme scripts...
-		wp_register_script(
-			'twentytwelve-navigation',
-			get_bloginfo('template_directory') . '/js/navigation.js',
-			array('jquery'), '1.0', true );
-		wp_enqueue_script('twentytwelve-navigation');
-		
-		
+
+	
+
+	wp_enqueue_script( 
+			'acstarter-vendors', 
+			get_template_directory_uri() . '/assets/js/vendors.js', 
+			array(), '20120206', 
+			true 
+		);
+
+	wp_enqueue_script( 
+			'acstarter-custom', 
+			get_template_directory_uri() . '/assets/js/custom.js', 
+			array(), '20120206', 
+			true 
+		);
 		
 	}
 }
@@ -43,84 +36,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
-/**
- * Add the field to the checkout
- */
-add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
-function my_custom_checkout_field( $checkout ) {
-
-    echo '<div id="my_custom_checkout_field"><h2>' . __('School Info') . '</h2>';
-
-    woocommerce_form_field( 'student_name', array(
-        'type'          => 'text',
-        'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Student\'s Name' . ' <abbr class="required" title="required">*</abbr>'),
-        'placeholder'   => __('Name'),
-        ), $checkout->get_value( 'student_name' ));
-		
-		
-	woocommerce_form_field( 'student_teacher', array(
-        'type'          => 'text',
-        'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Student\'s Teacher' . ' <abbr class="required" title="required">*</abbr>'),
-        'placeholder'   => __('Teacher\'s Name'),
-        ), $checkout->get_value( 'student_teacher' ));
-
-    echo '</div>';
-} //
-
-/**
- * Process the checkout
- */
-add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
-
-function my_custom_checkout_field_process() {
-    // Check if set, if its not set add an error.
-    if ( ! $_POST['student_name'] )
-        wc_add_notice( __( '<strong>Student\'s name</strong> is a required field.' ), 'error' );
-	if ( ! $_POST['student_teacher'] )
-        wc_add_notice( __( '<strong>Teachers\'s name</strong> is a required field.' ), 'error' );
-	} //
-
-/**
- * Update the order meta with field value
- */
-add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
-
-function my_custom_checkout_field_update_order_meta( $order_id ) {
-    if ( ! empty( $_POST['student_name'] ) ) {
-        update_post_meta( $order_id, 'Student Name', sanitize_text_field( $_POST['student_name'] ) );
-    }
-	if ( ! empty( $_POST['student_teacher'] ) ) {
-        update_post_meta( $order_id, 'Teacher Name', sanitize_text_field( $_POST['student_teacher'] ) );
-    }
-}	
-/**
- * Display field value on the order edit page
- */
-add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
-
-function my_custom_checkout_field_display_admin_order_meta($order){
-    echo '<p><strong>'.__('Student Name').':</strong> ' . get_post_meta( $order->id, 'Student Name', true ) . '</p>';
-	 echo '<p><strong>'.__('Teacher Name').':</strong> ' . get_post_meta( $order->id, 'Teacher Name', true ) . '</p>';
-}
-
-
-
-
-/*----------[ woocommerce settings ]------------*/
-add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
-function jk_change_breadcrumb_home_text( $defaults ) {
-    // Change the breadcrumb home text from 'Home' to 'Appartment'
-	$link = get_bloginfo('url') . "/school-store";
-	$defaults['home'] = "<a href='" . $link . "'>School Store</a>";
-	return $defaults;
-}
-
-
-	// Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	//wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 /*
 
 	Custom client login, link and title.
@@ -197,7 +113,7 @@ function js_custom_init()
 } // close custom post type
 
 // add additional image sizes
-	add_image_size( 'person-profile', 120, 200, array('center', 'center') ); //300 pixels wide (and unlimited height)
+
 	add_image_size( 'banners', 1100, 201, array('top', 'center') ); //300 pixels wide (and unlimited height)
 	
 	// This theme uses wp_nav_menu() in one location.
@@ -222,39 +138,8 @@ add_action( 'wp_enqueue_scripts', 'selwyn_style' );
 	
 	
 
-// Change number or products per row to 3
-add_filter('loop_shop_columns', 'loop_columns');
-if (!function_exists('loop_columns')) {
-	function loop_columns() {
-		return 3; // 3 products per row
-	}
-}
 
-/**
- * Register our sidebars and widgetized areas.
- *
- */
-function bw_widgets_init() {
 
-	register_sidebar( array(
-		'name' => 'Product sidebar',
-		'id' => 'product_sidebar',
-		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="rounded">',
-		'after_title' => '</h2>',
-	) );
-	
-	register_sidebar( array(
-		'name' => 'Blog sidebar',
-		'id' => 'blog_sidebar',
-		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="rounded">',
-		'after_title' => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'bw_widgets_init' );
 
 
 
@@ -269,14 +154,6 @@ function get_excerpt($count){
   return $excerpt;
 }
 
-// remove reviews
-add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
-function sb_woo_remove_reviews_tab($tabs) {
-
- unset($tabs['reviews']);
-
- return $tabs;
-}
 /**
  * Add support for a custom header image.
  */
