@@ -3,7 +3,7 @@ html {
 	
 }
 body {
- 	font-family: "Open Sans",sans-serif;
+ 	font-family: 'Poppins', sans-serif;
 }
 div {
 	/* These are technically the same, but use both */
@@ -36,7 +36,7 @@ a {text-decoration: none;}
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 66%;
+		width: 62%;
 		float: left;
 		margin: 0;
 	}
@@ -50,7 +50,7 @@ a {text-decoration: none;}
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 26%;
+		width: 30%;
 		float: right;
 		margin: 0;
 	}
@@ -73,7 +73,7 @@ a {text-decoration: none;}
 		width: 100px;
 		height: 117px;
 		z-index: 1000;
-		margin: 40px auto 10px auto;
+		margin: 20px auto 10px auto;
 		position: relative;
 	}
 	@media screen and (min-width: $deskwidth) {
@@ -114,11 +114,18 @@ a {text-decoration: none;}
 
 }
 #sociallinks {
-	width:110px;
+	width:290px;
 	position: relative;
 	float: right;
 	z-index: 6;	
-	margin: 0 20px 0;
+	margin: 10px 20px 0;
+	p {
+		width: auto;
+		display: inline-block;
+		float: left;
+		margin: 5px 20px 0; 
+		color: #999999;
+	}
 	@media screen and (min-width: $tabwidth) {
 	
 	}
@@ -140,25 +147,25 @@ a {text-decoration: none;}
 #sociallinks  ul a {
 	
 	text-decoration: none;
-	background-image: url(images/social.png);
+	background-image: url(images/social-new.png);
 	background-repeat: no-repeat;
 	display: inline-block;
-	height: 45px;
+	height: 30px;
 	text-indent: -9000px;
 	position: relative;
 }
 #sociallinks  .facebook a {
-	width:45px;
-	background-position: -44px -0px;
+	width:30px;
+	background-position: -30px -0px;
 	position: relative;
 	
 }
 #sociallinks .facebook a:hover {
-	background-position: -44px -0px;
+	background-position: -30px -0px;
 	
 }
 #sociallinks  .twitter a {
-	width:45px;
+	width:30px;
 	background-position: -0px 0px;
 	position: relative;
 	

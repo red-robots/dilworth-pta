@@ -89,6 +89,16 @@ section.blue-banner {
 				color: #fff;
 				width: 100%;
 			}
+			&.shirt {
+				text-indent: -9000px;
+				height: 50px;
+				display: block;
+				background: {
+					image: url(images/shirt.png);
+					size: cover;
+					repeat: no-repeat;
+				}
+			}
 		}
 		.link-content {
 			width: 75%;
@@ -320,6 +330,47 @@ section.blue-banner {
 #quick-links li a:hover {
 	background-color: $color-dark-green;
 }
+.quick-icons {
+
+	.icon {
+		width: 14%;
+		float:  left;
+		margin: 1%;
+
+		i {
+			width: 100%;
+			position: relative;
+			color: #fff;
+			transform: scale(.7);
+			@include transition(all .3s ease);
+			a {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-indent: -9000px;
+			}
+			&:hover {
+				transform: scale(.9);
+			}
+
+		}
+		&.shirt {
+			text-indent: -9000px;
+			height: 40px;
+			a {
+				background: {
+					image: url(images/shirt.png);
+					size: contain;
+					repeat: no-repeat;
+				}
+				display: block;
+				height: 40px;
+			}
+			
+		}
+	}
+}
 /* = Community Partner Logos
 -------------------------------------------------------------- */
 .logos {
@@ -346,18 +397,18 @@ section.blue-banner {
 /* = Classes Page
 -------------------------------------------------------------- */
 .person-profile {
-	width: 300px;
+	width: 45%;
 	float:left;
 	margin: 0;
 	padding: 10px;
 }
 .person-pic {
-	width: 120px;
+	width: 30%;
 	height:200px;
 	float:left;
 }
 .person-right {
-	width: 170px;
+	width: 60%;
 	float:left;
 	margin: 0 0 0 10px;
 	border-bottom: 2px solid #CCC;
@@ -446,7 +497,7 @@ section.page-content {
 	padding-bottom: 30px;
 	@media screen and (min-width: $tabwidth) {
 		overflow: hidden;
-		width: 700px;
+		width: 62%;
 		float: left;
 	}
 }
@@ -455,7 +506,7 @@ section.page-content {
 	float:right;
 	padding: 40px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
+		width: 30%;
 		float:right;
 		padding: 40px 0 0 0;
 	}	

@@ -36,7 +36,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
-
+show_admin_bar( false );
 /*
 
 	Custom client login, link and title.
@@ -64,11 +64,7 @@ function loginpage_custom_link() {
 add_filter('login_headerurl','loginpage_custom_link');
 
 
-// add a favicon from your theme folder
-function mytheme_favicon() {  
-	echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/favicon.png" >';  
-} 
-add_action('wp_head', 'mytheme_favicon');
+
 
 
 /* Custom Post Types */

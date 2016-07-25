@@ -23,19 +23,12 @@ get_header(); ?>
 					<?php while(has_sub_field('people')) : ?>
                     <?php 
 					   $image = get_sub_field('photo');
-					   $url = $image['url'];
-					   $title = $image['title'];
-					   $alt = $image['alt'];
-					   $caption = $image['caption'];
-						 
-					   // thumbnail
-					   $size = 'person-profile'; // custom size from add_image_size
-					   $thumb = $image['sizes'][ $size ];
-					   $width = $image['sizes'][ $size . '-width' ];
-					   $height = $image['sizes'][ $size . '-height' ];
+					   $size = 'person-profile'; 
 					?>
                     	<div class="person-profile">
-                        	<div class="person-pic"><img src="<?php echo $thumb; ?>" /></div>
+                        	<div class="person-pic">
+                                <?php echo wp_get_attachment_image( $image, $size ); ?>
+                            </div>
                         	<div class="person-right">
                                 <div class="person-name"><?php the_sub_field('name'); ?></div>
                                 

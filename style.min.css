@@ -1465,7 +1465,7 @@ html[xmlns] .slides{display:block}
 .widget{margin:0 0 30px 0}
 .widget li{font-size:14px;margin:0 0 10px 0}
 .widget li a{text-decoration:none}
-body{font-family:"Open Sans",sans-serif}
+body{font-family:'Poppins',sans-serif}
 div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 a{text-decoration:none}
 .clear{clear:both}
@@ -1473,26 +1473,27 @@ a{text-decoration:none}
 @media screen and (min-width:600px){.wrapper{width:90%}
 }@media screen and (min-width:1100px){.wrapper{padding:0}
 }.content-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
+@media screen and (min-width:600px){.content-area{width:62%;float:left;margin:0}
 }@media screen and (min-width:1100px){}
 .widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
+@media screen and (min-width:600px){.widget-area{width:30%;float:right;margin:0}
 }@media screen and (min-width:1100px){}
 .logo,h1.logo{width:160px;height:188px;background-image:url(images/logo.png);background-size:cover;z-index:1000;margin:10px auto 10px auto;position:relative}
-@media screen and (min-width:600px){.logo,h1.logo{width:100px;height:117px;z-index:1000;margin:40px auto 10px auto;position:relative}
+@media screen and (min-width:600px){.logo,h1.logo{width:100px;height:117px;z-index:1000;margin:20px auto 10px auto;position:relative}
 }@media screen and (min-width:1100px){.logo,h1.logo{width:160px;height:188px}
 }.logo a,h1.logo a{width:160px;height:188px;display:block;text-indent:-9000px}
 @media screen and (min-width:600px){.logo a,h1.logo a{width:100px;height:117px;display:block;text-indent:-9000px}
 }@media screen and (min-width:1100px){.logo a,h1.logo a{width:160px;height:188px}
 }#header{width:100%;float:left;position:relative}
 @media screen and (min-width:600px){#header{float:left;position:relative}
-}#sociallinks{width:110px;position:relative;float:right;z-index:6;margin:0 20px 0}
+}#sociallinks{width:290px;position:relative;float:right;z-index:6;margin:10px 20px 0}
+#sociallinks p{width:auto;display:inline-block;float:left;margin:5px 20px 0;color:#999}
 #sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative}
 #sociallinks ul li{float:left;position:relative;margin:0 5px}
-#sociallinks ul a{text-decoration:none;background-image:url(images/social.png);background-repeat:no-repeat;display:inline-block;height:45px;text-indent:-9000px;position:relative}
-#sociallinks .facebook a{width:45px;background-position:-44px -0;position:relative}
-#sociallinks .facebook a:hover{background-position:-44px -0}
-#sociallinks .twitter a{width:45px;background-position:-0 0;position:relative}
+#sociallinks ul a{text-decoration:none;background-image:url(images/social-new.png);background-repeat:no-repeat;display:inline-block;height:30px;text-indent:-9000px;position:relative}
+#sociallinks .facebook a{width:30px;background-position:-30px -0;position:relative}
+#sociallinks .facebook a:hover{background-position:-30px -0}
+#sociallinks .twitter a{width:30px;background-position:-0 0;position:relative}
 #sociallinks .twitter a:hover{background-position:-0 -0}
 .gce-page-list .gce-list .gce-list-event{padding:5px}
 #main{width:100%;margin:20px auto;overflow:hidden;background-color:#fff}
@@ -1518,6 +1519,7 @@ section.blue-banner .envolved.last{margin:0}
 @media screen and (min-width:600px){section.blue-banner .envolved{width:26%}
 }section.blue-banner .envolved .icon{width:20%;float:left}
 section.blue-banner .envolved .icon i{color:#fff;width:100%}
+section.blue-banner .envolved .icon.shirt{text-indent:-9000px;height:50px;display:block;background-image:url(images/shirt.png);background-size:cover;background-repeat:no-repeat}
 section.blue-banner .envolved .link-content{width:75%;float:right}
 section.blue-banner .envolved h3{margin:0 0 10px 0;font-size:16px;font-weight:300}
 section.blue-banner .envolved p{margin:0;font-size:13px}
@@ -1558,14 +1560,20 @@ section.blue-banner .envolved p{margin:0;font-size:13px}
 #quick-links h2{width:100%;margin:-0 0 20px 0;padding:5px 0;display:block;float:left;color:#fff;text-transform:uppercase;text-align:center}
 #quick-links li a{width:100%;text-align:center;float:left;display:block;border:1px solid #fff;color:#fff;font-size:14px;text-decoration:none;padding:10px 0;margin:0 0 10px 0;-webkit-transition:all .3s ease;transition:all .3s ease}
 #quick-links li a:hover{background-color:#004a36}
+.quick-icons .icon{width:14%;float:left;margin:1%}
+.quick-icons .icon i{width:100%;position:relative;color:#fff;-webkit-transform:scale(0.7);-ms-transform:scale(0.7);transform:scale(0.7);-webkit-transition:all .3s ease;transition:all .3s ease}
+.quick-icons .icon i a{width:100%;position:absolute;top:0;left:0;text-indent:-9000px}
+.quick-icons .icon i:hover{-webkit-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}
+.quick-icons .icon.shirt{text-indent:-9000px;height:40px}
+.quick-icons .icon.shirt a{background-image:url(images/shirt.png);background-size:contain;background-repeat:no-repeat;display:block;height:40px}
 .logos{width:160px;margin:10px;display:inline-block}
 .logos img{width:100%}
 .community-sponsors{width:100%;border-top:solid 1px #006f51;border-bottom:solid 1px #006f51;margin:30px 0 0 0;overflow:hidden;text-align:center}
 .padding20{padding:20px}
 .minitweets{width:100%;position:relative}
-.person-profile{width:300px;float:left;margin:0;padding:10px}
-.person-pic{width:120px;height:200px;float:left}
-.person-right{width:170px;float:left;margin:0 0 0 10px;border-bottom:2px solid #CCC;padding:0 0 10px 0}
+.person-profile{width:45%;float:left;margin:0;padding:10px}
+.person-pic{width:30%;height:200px;float:left}
+.person-right{width:60%;float:left;margin:0 0 0 10px;border-bottom:2px solid #CCC;padding:0 0 10px 0}
 .person-name{width:100%;margin:0 0 10px 0;font-size:18px}
 .person-weblink{width:30px;height:27px;position:relative;float:left;margin:2px 15px 0 0;background-image:url(images/icon-computer-small.png);background-repeat:no-repeat}
 .person-weblink a{width:30px;height:27px;display:block;text-indent:-9000px}
@@ -1577,9 +1585,9 @@ section.blue-banner .envolved p{margin:0;font-size:13px}
 section.page-content{overflow:hidden;width:auto;padding:10px}
 @media screen and (min-width:600px){section.page-content{overflow:hidden;width:100%}
 }.page-left{overflow:hidden;width:100%;float:left;padding-bottom:30px}
-@media screen and (min-width:600px){.page-left{overflow:hidden;width:700px;float:left}
+@media screen and (min-width:600px){.page-left{overflow:hidden;width:62%;float:left}
 }.page-right{width:100%;float:right;padding:40px 0 0 0}
-@media screen and (min-width:600px){.page-right{width:300px;float:right;padding:40px 0 0 0}
+@media screen and (min-width:600px){.page-right{width:30%;float:right;padding:40px 0 0 0}
 }.page-right h2.rounded{margin:0 0 20px 0;color:#7faaef;font-size:18px}
 #secondary{margin-top:30px}
 .page-links{clear:both;line-height:1.714285714}

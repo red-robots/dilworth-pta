@@ -5,6 +5,12 @@
 
 get_header(); 
 
+$facebook = get_field('facebook_link', 'option');
+$twitter = get_field('twitter_link', 'option');
+$calendar = get_field('sidebar_calendar_link', 'option');
+$purchase_link = get_field('sidebar_spirt_wear_link', 'option');
+$volunteer_link = get_field('sidebar_volunteer_link', 'option');
+$newsletter_link = get_field('sidebar_newsletter_link', 'option');
 
 // specific post ID you want to pull
 $post = get_post(45); 
@@ -12,13 +18,13 @@ setup_postdata( $post );
  
   $newsletter_title = get_field('newsletter_title');
   $newsletters_description = get_field('newsletters_description');
-  $newsletter_link = get_field('newsletter_link');
+  
   $volunteer_title = get_field('volunteer_title');
   $volunteer_description = get_field('volunteer_description');
-  $volunteer_link = get_field('volunteer_link');
+  
   $purchase_title = get_field('purchase_title');
   $purchase_description = get_field('purchase_description');
-  $purchase_link = get_field('purchase_link');
+  
  
 wp_reset_postdata();
 
@@ -81,7 +87,8 @@ wp_reset_postdata();
 
     <div class="envolved first ">
       <a class=" js-blocks" href="<?php echo $purchase_link; ?>">
-        <div class="icon"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></div>
+        <div class="icon shirt">
+        </div>
         <div class="link-content">
           <h3><?php echo $purchase_title; ?></h3>
           <p><?php echo $purchase_description; ?></p>
@@ -132,7 +139,7 @@ $the_query = new WP_Query( $args ); ?>
 
 
 <div class="home-box">
-<h2>Facebook Posts</h2>
+<h2>Facebook</h2>
 <div class="clear"></div>
 <?php //echo do_shortcode('[minitwitter id="492307712277872641" username="selwynpta" limit=2]');  ?>
 <?php echo do_shortcode('[custom-facebook-feed]');  ?>
@@ -149,7 +156,7 @@ $the_query = new WP_Query( $args ); ?>
 <h2>Upcoming Events</h2>
 <div class="clear"></div>
 <?php //echo do_shortcode('[google-calendar-events id="2" type="list"]'); ?>
-<?php echo do_shortcode('[google-calendar-events id="2353" type="list"]'); ?>
+<?php echo do_shortcode('[calendar id="1309"]'); ?>
 <div class="clear"></div>
 <div class="view-cal">
 <a href="<?php bloginfo('url'); ?>/calendar">View Calendar &raquo;</a>
@@ -162,31 +169,11 @@ $the_query = new WP_Query( $args ); ?>
 
 
 <div class="col last">
-
- <div id="quick-links">
-<h2>Quick Links</h2>
-<?php 
-// Run the Quicklinks Repeater Field
-if(get_field('quick_links', 'option')) :  ?>
-<ul>
-<?php while(has_sub_field('quick_links', 'option')) :  ?>
-<li>
-  <a target="_blank" href="<?php 
-if(get_sub_field('link', 'option')!="") {
-the_sub_field('link', 'option');
-} elseif(get_sub_field('file', 'option')!="") {
-the_sub_field('file', 'option');
-} else { echo "#"; } ?>">
-          <?php the_sub_field('title', 'option'); ?> &raquo;
-  </a>
-</li>
-<?php endwhile; ?>
-</ul>
-<?php endif; ?>
-
-</div><!-- quick links -->
-
+  <?php get_template_part('inc/quicklinks'); ?>
 </div><!-- col -->
+
+
+
 </div><!-- wrapper -->
 
 <div class="clear"></div>

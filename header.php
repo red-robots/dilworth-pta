@@ -29,8 +29,16 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url'); ?>/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="<?php bloginfo('template_url'); ?>/favicons/manifest.json">
+<link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
 
 
 <?php wp_head(); ?>
@@ -51,6 +59,7 @@
     <div id="header">
     
     <div id="sociallinks">
+    <p>Stay Connected: </p>
         <ul>
         	<li class="facebook"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
             <li class="twitter"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
@@ -76,7 +85,7 @@
 
 <?php if(!is_front_page()) : ?>
 <div id="banner">
-	<?php if ( has_post_thumbnail() && !is_product() )  {
+	<?php if ( has_post_thumbnail() )  {
         the_post_thumbnail('banners');
     } else {?>
 		<img src="<?php the_field('store_banner','option'); ?>" />
