@@ -8,6 +8,10 @@
    width: 100%;
     margin: 0px auto;
   } 
+
+  img {
+    width: 100%;
+  }
 }
 #banner {
   width: 90%;
@@ -139,15 +143,16 @@ html[xmlns] .slides {
 /* Direction Nav */
 .flex-direction-nav {
     *height: 0;
+    padding: 30px;
 }
 
 .flex-direction-nav a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 75px;
     margin: -20px 0 0;
     position: absolute;
-    top: 50%;
+    top: 30%;
     z-index: 10;
     overflow: hidden;
     opacity: 0;
@@ -157,26 +162,34 @@ html[xmlns] .slides {
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     transition: all .3s ease;
+    text-indent: -9000000px;
+ 
+    background: {
+        image: url(images/arrows.png);
+        repeat: no-repeat;
+    }
 }
 
 .flex-direction-nav .flex-prev {
   /*  left: -50px;*/
-     /*left: 10px;
-      opacity: 0.7;*/
-    display: none;
+     left: 0px;
+      opacity: 0.7;
+    // display: none;
+    background-position: 0 0;
 }
 
 .flex-direction-nav .flex-next {
     /*right: -50px;*/
-  /*right: 10px;
-    text-align: right;
-   opacity: 0.7;*/
-   display: none;
+  right: 0px;
+    // text-align: right;
+   opacity: 0.7;
+   background-position:-52px 0 ;
+   // display: none;
 }
 
 .flexslider:hover .flex-prev {
     opacity: 0.7;
-    left: 10px;
+    // left: 10px;
 }
 
 .flexslider:hover .flex-next {
@@ -197,14 +210,14 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav a:before {
-    font-family: "flexslider-icon";
-    font-size: 40px;
+    // font-family: "flexslider-icon";
+    // font-size: 40px;
     display: inline-block;
-    content: '\f001';
+    // content: '\f001';
 }
 
 .flex-direction-nav a.flex-next:before {
-    content: '\f002';
+    // content: '\f002';
 }
 
 /* Pause/Play */

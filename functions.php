@@ -127,7 +127,7 @@ function js_custom_init()
  */
 function selwyn_style() {
 	wp_enqueue_style( 'selwynsstyle', get_stylesheet_uri() );
-	wp_enqueue_style( 'shopstyle', get_template_directory_uri() . '/style-shop.css' );
+	//wp_enqueue_style( 'shopstyle', get_template_directory_uri() . '/style-shop.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'selwyn_style' );

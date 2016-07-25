@@ -39,6 +39,9 @@
 
 /* = Home Page
 -------------------------------------------------------------- */
+.simcal-event-title {
+	font-size: 22px;
+}
 section.blue-banner {
 	background-color: $color-blue;
 	overflow: hidden;
@@ -401,14 +404,39 @@ section.blue-banner {
 	float:left;
 	margin: 0;
 	padding: 10px;
+	.icon {
+		width: 40px;
+		float:  left;
+		margin: 3px;
+
+		i {
+			width: 100%;
+			position: relative;
+			color: $color-green;
+			transform: scale(.7);
+			@include transition(all .3s ease);
+			a {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-indent: -9000px;
+			}
+			&:hover {
+				transform: scale(.9);
+			}
+
+		}
+		
+	}
 }
 .person-pic {
-	width: 30%;
+	width: 40%;
 	height:200px;
 	float:left;
 }
 .person-right {
-	width: 60%;
+	width: 55%;
 	float:left;
 	margin: 0 0 0 10px;
 	border-bottom: 2px solid #CCC;
@@ -497,7 +525,7 @@ section.page-content {
 	padding-bottom: 30px;
 	@media screen and (min-width: $tabwidth) {
 		overflow: hidden;
-		width: 62%;
+		width: 65%;
 		float: left;
 	}
 }

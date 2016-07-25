@@ -32,29 +32,32 @@ get_header(); ?>
                         	<div class="person-right">
                                 <div class="person-name"><?php the_sub_field('name'); ?></div>
                                 
-                                <?php if(get_sub_field('web_link')!="") : ?>
-                                <div class="person-weblink">
-                                    <a href="<?php the_sub_field('web_link'); ?>" target="_blank">
-                                    	<?php the_sub_field('web_link'); ?>
-                                    </a>
-                                </div><!-- person weblink -->
+                                <?php if(get_sub_field('web_link')!="") : 
+                                $weblink = get_sub_field('email');
+                                ?>
+                                <div class="icon"><i class="fa fa-desktop fa-3x" aria-hidden="true">
+                                    <a target="_blank"> href="<a href="<?php echo $weblink; ?>">"><?php echo antispambot($personEmail); ?></a>
+                                  </i></div>
                                 <?php endif; ?>
                                 
                                 <?php if(get_sub_field('email')!="") : ?>
-                                <div class="person-email">
+                                
                                 		<?php $personEmail = get_sub_field('email'); ?>
-                                    <a href="mailto:<?php the_sub_field('email'); ?>">
-											<?php echo antispambot($personEmail); ?>
-                                    </a>
-                                </div><!-- person email -->
+                                        <div class="icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true">
+                                            <a target="_blank"> href="<a href="mailto:<?php the_sub_field('email'); ?>">"><?php echo antispambot($personEmail); ?></a>
+                                          </i></div>
+                                   
+                                
                                 <?php endif; ?>
                                 
                                 <?php if(get_sub_field('calendar_link')!="") : ?>
-                                <div class="person-calendar">
-                                    <a href="<?php the_sub_field('calendar_link'); ?>" target="_blank">
-                                    	<?php the_sub_field('calendar_link'); ?>
-                                    </a>
-                                </div><!-- person calendar -->
+                               
+                                 <div class="icon"><i class="fa fa-calendar-o fa-3x" aria-hidden="true">
+                                      <a href="<?php the_sub_field('calendar_link'); ?>" target="_blank">Calendar</a>
+                                  </i></div>
+                                   
+                                    	
+                               
                                 <?php endif; ?>
                                 
                          </div><!-- perspn right -->

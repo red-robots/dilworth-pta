@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="wrapper">
 	<div class="page-content">
     	
 		  
@@ -22,11 +22,11 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwelve' ); ?></p>
-					<?php get_search_form(); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_class' => 'nav-menu' ) ); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+</div><!-- wrapper -->
 <?php get_footer(); ?>

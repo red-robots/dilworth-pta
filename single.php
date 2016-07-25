@@ -11,7 +11,7 @@ get_header(); ?>
 
 
 
-
+<div class="wrapper">
 <div class="page-content">
 
 <div class="page-left">
@@ -42,6 +42,6 @@ get_header(); ?>
 
 </div><!-- #content -->
 
-
+</div><!-- wrapper -->
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
