@@ -1421,6 +1421,7 @@ a:hover,a:active{outline:0}
 }#home-slider{width:90%;margin:10px auto}
 @media screen and (min-width:600px){#home-slider{width:100%;margin:0 auto}
 }#banner{width:90%;margin:10px auto}
+#banner img{width:100%}
 @media screen and (min-width:600px){#banner{width:100%;margin:0 auto}
 }.flex-container a:active,.flexslider a:active,.flex-container a:focus,.flexslider a:focus{outline:0}
 .slides,.flex-control-nav,.flex-direction-nav{margin:0;padding:0;list-style:none}
