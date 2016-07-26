@@ -30,7 +30,7 @@
 
 	<div class="quick-icons">
 	  <div class="icon"><i class="fa fa-facebook fa-3x" aria-hidden="true">
-	    <a target="_blank"> href="<?php echo $facebook; ?>">Facebook</a>
+	    <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
 	  </i></div>
 	  <div class="icon"><i class="fa fa-twitter fa-3x" aria-hidden="true">
 	     <a target="_blank" href="<?php echo $twitter; ?>">Twitter</a>

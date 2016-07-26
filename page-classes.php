@@ -33,10 +33,10 @@ get_header(); ?>
                                 <div class="person-name"><?php the_sub_field('name'); ?></div>
                                 
                                 <?php if(get_sub_field('web_link')!="") : 
-                                $weblink = get_sub_field('email');
+                                $weblink = get_sub_field('web_link');
                                 ?>
                                 <div class="icon"><i class="fa fa-desktop fa-3x" aria-hidden="true">
-                                    <a target="_blank"> href="<a href="<?php echo $weblink; ?>">"><?php echo antispambot($personEmail); ?></a>
+                                    <a target="_blank"> href="<a href="<?php echo $weblink; ?>">"><?php echo $weblink; ?>"</a>
                                   </i></div>
                                 <?php endif; ?>
                                 

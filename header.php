@@ -61,8 +61,8 @@
     <div id="sociallinks">
     <p>Stay Connected: </p>
         <ul>
-        	<li class="facebook"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
-            <li class="twitter"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
+        	<li class="twitter"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
+            <li class="facebook"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
         </ul>
     </div><!-- sociallinks -->
     
@@ -88,7 +88,7 @@
 	<?php if ( has_post_thumbnail() )  {
         the_post_thumbnail('banners');
     } else {?>
-		<img src="<?php the_field('store_banner','option'); ?>" />
+		<img src="<?php the_field('default_banner_image','option'); ?>" />
 	<?php } ?>
 </div><!-- banner -->
 <?php endif; ?>
