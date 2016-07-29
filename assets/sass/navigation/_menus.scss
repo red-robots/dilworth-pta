@@ -31,14 +31,17 @@
 
 		ul {
 			background-color: $color-green;
-			float: left;
-			position: absolute;
-			top: 3.5em;
-			left: -999em;
+			width: 100%;
 			z-index: 99999;
-			width: 200px;
+			
+
 			@media screen and (min-width: $midwidth) {
 				top: 4.6em;
+				float: left;
+				position: absolute;
+				top: 3.5em;
+				left: -999em;
+				width: 200px;
 			}
 			@media screen and (min-width: $deskwidth) {
 				top: 3.99em;
@@ -56,7 +59,10 @@
 				width: 100%;
 				margin: 0;
 				line-height: 3;
-				text-align: left;
+				text-align: center;
+				@media screen and (min-width: $midwidth) {
+					text-align: left;
+				}
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -93,16 +99,18 @@
 		float: left;
 		position: relative;
 		font-size: 16px;
-		line-height: 5.2857143;
-
+		line-height: 1.2;
+		width: 100%;
 		
 
 		@media screen and (min-width: $tabwidth) {
+			
 			margin: 0 5px;
 			font-size: 12px;
-			line-height: 2.2857143;
+			// line-height: 2.2857143;
 		}
 		@media screen and (min-width: $midwidth) {
+			width: auto;
 			margin: 0 15px;
 			font-size: 15px;
 			line-height: 3.2857143;

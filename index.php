@@ -186,6 +186,10 @@ $the_query = new WP_Query( $args ); ?>
     //the_row;
 
       $image = get_sub_field('logo', 'option'); 
+      $link = get_sub_field('link', 'option'); 
+      if( $link == '' ) {
+        $link = '#';
+      }
       $url = $image['url'];
       $title = $image['title'];
       $alt = $image['alt'];
@@ -194,7 +198,9 @@ $the_query = new WP_Query( $args ); ?>
       $thumb = $image['sizes'][ $size ];
 
       echo '<div class="logos">';
-        echo '<img src="'.$thumb.'"  />';
+        echo '<a target="_blank" href="' . $link . '">';
+          echo '<img src="'.$thumb.'"  />';
+        echo '</a>';
       echo '</div>';
 
     endwhile;

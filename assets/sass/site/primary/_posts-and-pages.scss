@@ -91,6 +91,16 @@ section.blue-banner {
 			i {
 				color: #fff;
 				width: 100%;
+
+				@media screen and (min-width: $tabwidth) {
+					transform: scale(.5);
+				}
+				@media screen and (min-width: $midwidth) {
+					transform: scale(.7);
+				}
+				@media screen and (min-width: $deskwidth) {
+					transform: scale(.9);
+				}
 			}
 			&.shirt {
 				text-indent: -9000px;
@@ -100,6 +110,15 @@ section.blue-banner {
 					image: url(images/shirt.png);
 					size: cover;
 					repeat: no-repeat;
+				}
+				@media screen and (min-width: $tabwidth) {
+					background-size: contain;
+				}
+				@media screen and (min-width: $midwidth) {
+					background-size: contain;
+				}
+				@media screen and (min-width: $deskwidth) {
+					background-size: cover;
 				}
 			}
 		}
@@ -400,10 +419,13 @@ section.blue-banner {
 /* = Classes Page
 -------------------------------------------------------------- */
 .person-profile {
-	width: 45%;
+	width: 100%;
 	float:left;
 	margin: 0;
 	padding: 10px;
+	@media screen and (min-width: $tabwidth) {
+		width: 45%;	
+	}
 	.icon {
 		width: 40px;
 		float:  left;
@@ -431,16 +453,21 @@ section.blue-banner {
 	}
 }
 .person-pic {
-	width: 40%;
-	height:200px;
+	width: 100%;
 	float:left;
+	@media screen and (min-width: $tabwidth) {
+		width: 40%;
+	}
 }
 .person-right {
-	width: 55%;
+	width: 100%;
 	float:left;
 	margin: 0 0 0 10px;
 	border-bottom: 2px solid #CCC;
 	padding: 0 0 10px 0;
+	@media screen and (min-width: $tabwidth) {
+		width: 55%;
+	}
 }
 .person-name {
 	width: 100%;
