@@ -40,7 +40,8 @@
 /* = Home Page
 -------------------------------------------------------------- */
 .simcal-event-title {
-	font-size: 22px;
+	font-size: 18px;
+	font-weight: 300;
 }
 section.blue-banner {
 	background-color: $color-blue;
@@ -87,6 +88,7 @@ section.blue-banner {
 		
 		.icon {
 			width: 20%;
+			max-width: 70px;
 			float: left;
 			i {
 				color: #fff;
@@ -104,7 +106,7 @@ section.blue-banner {
 			}
 			&.shirt {
 				text-indent: -9000px;
-				height: 50px;
+				height: 60px;
 				display: block;
 				background: {
 					image: url(images/shirt.png);
@@ -113,6 +115,7 @@ section.blue-banner {
 				}
 				@media screen and (min-width: $tabwidth) {
 					background-size: contain;
+					height: 50px;
 				}
 				@media screen and (min-width: $midwidth) {
 					background-size: contain;
@@ -383,11 +386,17 @@ section.blue-banner {
 			a {
 				background: {
 					image: url(images/shirt.png);
-					size: contain;
+					size: 90%;
 					repeat: no-repeat;
+					position: bottom;
 				}
 				display: block;
 				height: 40px;
+				@include transition(all .3s ease);
+				&:hover {
+					background-size: 100%;
+					background-position: bottom;
+				}
 			}
 			
 		}

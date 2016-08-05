@@ -36,7 +36,7 @@ get_header(); ?>
                                 $weblink = get_sub_field('web_link');
                                 ?>
                                 <div class="icon"><i class="fa fa-desktop fa-3x" aria-hidden="true">
-                                    <a target="_blank"> href="<a href="<?php echo $weblink; ?>">"><?php echo $weblink; ?>"</a>
+                                    <a target="_blank" href="<?php echo $weblink; ?>"><?php echo $weblink; ?></a>
                                   </i></div>
                                 <?php endif; ?>
                                 

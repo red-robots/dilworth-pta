@@ -66,7 +66,7 @@ wp_reset_postdata();
   <div class="intro">Ways to stay involved:</div>
 
     <div class="envolved first">
-      <a class=" js-blocks" href="<?php echo $newsletter_link; ?>">
+      <a class=" js-blocks" href="<?php echo $newsletter_link; ?>" target="_blank">
         <div class="icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></div>
         <div class="link-content">
           <h3><?php echo $newsletter_title; ?></h3>
@@ -76,7 +76,7 @@ wp_reset_postdata();
     </div><!-- envolved -->
 
     <div class="envolved first ">
-      <a class=" js-blocks" href="<?php echo $volunteer_link; ?>">
+      <a class=" js-blocks" href="<?php echo $volunteer_link; ?>" target="_blank">
         <div class="icon"><i class="fa fa-hand-paper-o fa-3x" aria-hidden="true"></i></div>
         <div class="link-content">
           <h3><?php echo $volunteer_title; ?></h3>
@@ -86,7 +86,7 @@ wp_reset_postdata();
     </div><!-- envolved -->
 
     <div class="envolved first ">
-      <a class=" js-blocks" href="<?php echo $purchase_link; ?>">
+      <a class=" js-blocks" href="<?php echo $purchase_link; ?>" target="_blank">
         <div class="icon shirt">
         </div>
         <div class="link-content">
