@@ -154,6 +154,11 @@ a {text-decoration: none;}
 	height: 30px;
 	text-indent: -9000px;
 	position: relative;
+	border-bottom: 0;
+
+	&:hover {
+		background-color: rgba($color-green, 0);
+	}
 }
 #sociallinks  .facebook a {
 	width:30px;
@@ -173,6 +178,7 @@ a {text-decoration: none;}
 }
 #sociallinks  .twitter a:hover {
 	background-position: -0px -0px;
+
 	
 }
 .gce-page-list .gce-list .gce-list-event {
@@ -215,5 +221,9 @@ a {text-decoration: none;}
 	font-size:14px;	
 }
 #footer a {
-	text-decoration: none;	
+	text-decoration: none;
+	border-bottom: 0;
+	&:hover {
+		background-color: rgba($color-green, 0);
+	}	
 }
