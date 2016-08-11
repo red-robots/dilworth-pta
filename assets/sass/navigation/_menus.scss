@@ -14,11 +14,11 @@
 		margin: -100px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		min-height: 65px;
+		min-height: 67px;
 		margin: -160px 0 0 0;
 	}
 	@media screen and (min-width: $largewidth) {
-		min-height: 65px;
+		min-height: 67px;
 		margin: -160px 0 0 0;
 	}
 
@@ -29,7 +29,7 @@
 		padding-left: 0;
 		background-color: $color-green;
 		@media screen and (min-width: $midwidth) {
-			padding-left: 5%;
+			// padding-left: 5%;
 		}
 
 		ul {

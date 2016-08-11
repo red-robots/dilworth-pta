@@ -2,7 +2,7 @@ $color__link : $color-green;
 a {
 	color: $color__link;
 	@include transition(all .3s ease);
-	border-bottom: 2px solid $color-green;
+	// border-bottom: 2px solid $color-green;
 
 	/*&:visited {
 		color: $color__link-visited;

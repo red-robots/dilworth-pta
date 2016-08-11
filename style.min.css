@@ -1329,18 +1329,17 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
-a{color:#006f51;-webkit-transition:all .3s ease;transition:all .3s ease;border-bottom:2px solid #006f51}
+a{color:#006f51;-webkit-transition:all .3s ease;transition:all .3s ease}
 a:hover,a:focus,a:active{color:#004a36}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0;background-color:rgba(0,111,81,0.2)}
 .main-navigation{clear:both;display:block;text-align:center;width:100%;background-color:#006f51}
 @media screen and (min-width:600px){.main-navigation{min-height:50px;margin:50px 0 0 0}
 }@media screen and (min-width:900px){.main-navigation{min-height:70px;margin:-100px 0 0 0}
-}@media screen and (min-width:1100px){.main-navigation{min-height:65px;margin:-160px 0 0 0}
-}@media screen and (min-width:1250px){.main-navigation{min-height:65px;margin:-160px 0 0 0}
+}@media screen and (min-width:1100px){.main-navigation{min-height:67px;margin:-160px 0 0 0}
+}@media screen and (min-width:1250px){.main-navigation{min-height:67px;margin:-160px 0 0 0}
 }.main-navigation ul{display:none;list-style:none;margin:0;padding-left:0;background-color:#006f51}
-@media screen and (min-width:900px){.main-navigation ul{padding-left:5%}
-}.main-navigation ul ul{background-color:#006f51;width:100%;z-index:99999}
+.main-navigation ul ul{background-color:#006f51;width:100%;z-index:99999}
 @media screen and (min-width:900px){.main-navigation ul ul{top:4.6em;float:left;position:absolute;top:3.5em;left:-999em;width:200px}
 }@media screen and (min-width:1100px){.main-navigation ul ul{top:3.99em}
 }@media screen and (min-width:1250px){.main-navigation ul ul{top:3.99em}
@@ -1484,7 +1483,7 @@ a{text-decoration:none}
 .logo,h1.logo{width:160px;height:188px;background-image:url(images/logo.png);background-size:cover;z-index:1000;margin:10px auto 10px auto;position:relative}
 @media screen and (min-width:600px){.logo,h1.logo{width:100px;height:117px;z-index:1000;margin:20px auto 10px auto;position:relative}
 }@media screen and (min-width:1100px){.logo,h1.logo{width:160px;height:188px}
-}.logo a,h1.logo a{width:160px;height:188px;display:block;text-indent:-9000px}
+}.logo a,h1.logo a{width:160px;height:188px;display:block;text-indent:-9000px;border:0}
 @media screen and (min-width:600px){.logo a,h1.logo a{width:100px;height:117px;display:block;text-indent:-9000px}
 }@media screen and (min-width:1100px){.logo a,h1.logo a{width:160px;height:188px}
 }#header{width:100%;float:left;position:relative}
@@ -1518,7 +1517,7 @@ section.blue-banner{background-color:#002d62;overflow:hidden;padding:20px 0;colo
 section.blue-banner .intro{width:100%;float:left}
 @media screen and (min-width:600px){section.blue-banner .intro{width:13%;margin:0 1% 0 0}
 }section.blue-banner .envolved{width:100%;float:left}
-section.blue-banner .envolved a{background-color:#002148;border:#002148 1px solid;padding:5%;display:block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.blue-banner .envolved a{background-color:#002148;border:#002148 1px solid;padding:5%;display:inline-block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.blue-banner .envolved a:hover{border:#fff 1px solid}
 section.blue-banner .envolved.first{margin:0 2.5% 0 0}
 section.blue-banner .envolved.last{margin:0}
