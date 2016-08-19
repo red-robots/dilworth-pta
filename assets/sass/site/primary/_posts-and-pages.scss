@@ -105,14 +105,14 @@ section.blue-banner {
 				}
 			}
 			&.shirt {
-				text-indent: -9000px;
+				// text-indent: -9000px;
 				height: 60px;
 				display: block;
-				background: {
-					image: url(images/shirt.png);
-					size: cover;
-					repeat: no-repeat;
-				}
+				// background: {
+				// 	image: url(images/shirt.png);
+				// 	size: cover;
+				// 	repeat: no-repeat;
+				// }
 				@media screen and (min-width: $tabwidth) {
 					background-size: contain;
 					height: 50px;

@@ -88,6 +88,7 @@ wp_reset_postdata();
     <div class="envolved first ">
       <a class=" js-blocks" href="<?php echo $purchase_link; ?>" target="_blank">
         <div class="icon shirt">
+          <img src="<?php bloginfo('template_url') ?>/images/shirt.png">
         </div>
         <div class="link-content">
           <h3><?php echo $purchase_title; ?></h3>
