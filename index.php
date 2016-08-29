@@ -157,7 +157,7 @@ $the_query = new WP_Query( $args ); ?>
 <h2>Upcoming Events</h2>
 <div class="clear"></div>
 <?php //echo do_shortcode('[google-calendar-events id="2" type="list"]'); ?>
-<?php echo do_shortcode('[calendar id="1309"]'); ?>
+<?php //echo do_shortcode('[calendar id="1309"]'); ?>
 <div class="clear"></div>
 <div class="view-cal">
 <a href="<?php bloginfo('url'); ?>/calendar">View Calendar &raquo;</a>
