@@ -24,6 +24,13 @@ setup_postdata( $post );
   
   $purchase_title = get_field('purchase_title');
   $purchase_description = get_field('purchase_description');
+
+
+
+$iframe = get_field('google_cal_iframe');
+$shortcode = get_field('google_cal_shortcode');
+
+ 
   
  
 wp_reset_postdata();
@@ -158,7 +165,16 @@ $the_query = new WP_Query( $args ); ?>
 <div class="clear"></div>
 <?php //echo do_shortcode('[google-calendar-events id="2" type="list"]'); ?>
 <?php //echo do_shortcode('[calendar id="1309"]'); ?>
-<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dilworthschoolpta%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<?php 
+
+if( $shortcode != '' ) {
+  echo do_shortcode($shortcode);
+} elseif ( $iframe != '' ) {
+  echo $iframe;
+}
+
+ ?>
+<!-- <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=dilworthschoolpta%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
 <div class="clear"></div>
 <div class="view-cal">
 <a href="<?php bloginfo('url'); ?>/calendar">View Calendar &raquo;</a>
