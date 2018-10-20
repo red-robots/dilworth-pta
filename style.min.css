@@ -545,7 +545,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */@font-face{font-family:'FontAwesome';src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0");src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0#iefix") format("embedded-opentype"),url("./fonts/font-awesome/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("./fonts/font-awesome/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("./fonts/font-awesome/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("./fonts/font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px / 1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
 .fa-3x{font-size:3em}
@@ -1333,8 +1333,8 @@ a{color:#006f51;-webkit-transition:all .3s ease;transition:all .3s ease}
 a:hover,a:focus,a:active{color:#004a36}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0;background-color:rgba(0,111,81,0.2)}
-.main-navigation{clear:both;display:block;text-align:center;width:100%;background-color:#006f51}
-@media screen and (min-width:600px){.main-navigation{min-height:50px;margin:50px 0 0 0}
+.main-navigation{clear:both;display:block;text-align:center;width:100%;background-color:#006f51;margin:15px 0 0 0}
+@media screen and (min-width:600px){.main-navigation{min-height:50px;margin:15px 0 0 0}
 }@media screen and (min-width:900px){.main-navigation{min-height:70px;margin:-100px 0 0 0}
 }@media screen and (min-width:1100px){.main-navigation{min-height:67px;margin:-160px 0 0 0}
 }@media screen and (min-width:1250px){.main-navigation{min-height:67px;margin:-160px 0 0 0}
@@ -1480,17 +1480,18 @@ a{text-decoration:none}
 .widget-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.widget-area{width:30%;float:right;margin:0}
 }@media screen and (min-width:1100px){}
-.logo,h1.logo{width:160px;height:188px;background-image:url(images/logo.png);background-size:cover;z-index:1000;margin:10px auto 10px auto;position:relative}
-@media screen and (min-width:600px){.logo,h1.logo{width:100px;height:117px;z-index:1000;margin:20px auto 10px auto;position:relative}
-}@media screen and (min-width:1100px){.logo,h1.logo{width:160px;height:188px}
-}.logo a,h1.logo a{width:160px;height:188px;display:block;text-indent:-9000px;border:0}
-@media screen and (min-width:600px){.logo a,h1.logo a{width:100px;height:117px;display:block;text-indent:-9000px}
-}@media screen and (min-width:1100px){.logo a,h1.logo a{width:160px;height:188px}
+.logo,h1.logo{width:147px;height:178px;background-image:url(images/logo.png);background-size:cover;z-index:1000;margin:10px auto 10px auto;position:relative}
+@media screen and (min-width:600px){.logo,h1.logo{width:101px;height:122px;z-index:1000;margin:20px auto 10px auto;position:relative}
+}@media screen and (min-width:1100px){.logo,h1.logo{width:155px;height:188px}
+}.logo a,h1.logo a{width:147px;height:178px;display:block;text-indent:-9000px;border:0}
+@media screen and (min-width:600px){.logo a,h1.logo a{width:101px;height:122px;display:block;text-indent:-9000px}
+}@media screen and (min-width:1100px){.logo a,h1.logo a{width:155px;height:188px}
 }#header{width:100%;float:left;position:relative}
 @media screen and (min-width:600px){#header{float:left;position:relative}
-}#sociallinks{width:290px;position:relative;float:right;z-index:6;margin:10px 20px 0}
+}#sociallinks{width:290px;position:relative;float:right;z-index:6;margin:0 20px 14px}
 #sociallinks p{width:auto;display:inline-block;float:left;margin:5px 20px 0;color:#999}
-#sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative}
+@media screen and (min-width:600px){#sociallinks{margin:10px 20px 0}
+}#sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative}
 #sociallinks ul li{float:left;position:relative;margin:0 5px}
 #sociallinks ul a{text-decoration:none;background-image:url(images/social-new.png);background-repeat:no-repeat;display:inline-block;height:30px;text-indent:-9000px;position:relative;border-bottom:0}
 #sociallinks ul a:hover{background-color:rgba(0,111,81,0)}
@@ -1517,7 +1518,7 @@ section.blue-banner{background-color:#002d62;overflow:hidden;padding:20px 0;colo
 section.blue-banner .intro{width:100%;float:left}
 @media screen and (min-width:600px){section.blue-banner .intro{width:13%;margin:0 1% 0 0}
 }section.blue-banner .envolved{width:100%;float:left}
-section.blue-banner .envolved a{background-color:#002148;border:#002148 1px solid;padding:5%;display:inline-block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.blue-banner .envolved a{background-color:#0093b2;border:#0093b2 1px solid;padding:5%;display:inline-block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.blue-banner .envolved a:hover{border:#fff 1px solid}
 section.blue-banner .envolved.first{margin:0 2.5% 0 0}
 section.blue-banner .envolved.last{margin:0}
@@ -1565,7 +1566,7 @@ section.blue-banner .envolved p{margin:0;font-size:13px}
 .button-volunteer{width:148px;height:50px;position:relative;float:right;margin:0;background-image:url(images/but-volunteer.png);background-repeat:no-repeat}
 .button-volunteer a{width:148px;height:50px;display:block;text-indent:-9000px}
 .view-cal{width:auto;margin:10px auto;text-align:center}
-#quick-links{background-color:#006f51;padding:25px;width:100%;float:left;margin:20px 0 0 0}
+#quick-links{background-color:#0093b2;padding:25px;width:100%;float:left;margin:20px 0 0 0}
 #quick-links ul,#quick-links li{margin:0;padding:0}
 #quick-links li{list-style:none}
 #quick-links h2{width:100%;margin:-0 0 20px 0;padding:5px 0;display:block;float:left;color:#fff;text-transform:uppercase;text-align:center}

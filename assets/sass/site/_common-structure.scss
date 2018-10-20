@@ -61,8 +61,8 @@ a {text-decoration: none;}
 }
 
 .logo , h1.logo {
-	width: 160px;
-	height: 188px;
+    width: 147px;
+    height: 178px;
 	background: {
 		image: url(images/logo.png);
 		size: cover;
@@ -71,33 +71,33 @@ a {text-decoration: none;}
 	margin: 10px auto 10px auto;
 	position: relative;
 	@media screen and (min-width: $tabwidth) {
-		width: 100px;
-		height: 117px;
+		width: 101px;
+		height: 122px;
 		z-index: 1000;
 		margin: 20px auto 10px auto;
 		position: relative;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 160px;
-		height: 188px;
+        width: 155px;
+        height: 188px;
 	}
 
 }
 .logo a, h1.logo a{
-	width: 160px;
-	height: 188px;
+	width: 147px;
+    height: 178px;
 	display: block;
 	text-indent: -9000px;
 	border: 0;
 	@media screen and (min-width: $tabwidth) {
-		width: 100px;
-		height: 117px;
+		width: 101px;
+		height: 122px;
 		display: block;
 		text-indent: -9000px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 160px;
-		height: 188px;
+		width: 155px;
+        height: 188px;
 	}
 }
 
@@ -120,7 +120,7 @@ a {text-decoration: none;}
 	position: relative;
 	float: right;
 	z-index: 6;	
-	margin: 10px 20px 0;
+	margin: 0 20px 14px;
 	p {
 		width: auto;
 		display: inline-block;
@@ -129,7 +129,7 @@ a {text-decoration: none;}
 		color: #999999;
 	}
 	@media screen and (min-width: $tabwidth) {
-	
+	   margin: 10px 20px 0;
 	}
 	
 }

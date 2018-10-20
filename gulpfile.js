@@ -25,7 +25,7 @@
   */
 
 var project             = 'Dilworth PTA'; // Project Name.
-var projecturl          = 'http://localhost:8888/Bellaworks/dilworth-pta/site'; // Project URL. Could be something like localhost:8888.
+var projecturl          = 'http://localhost/ac/dilworth/'; // Project URL. Could be something like localhost:8888.
 
 
 var styleSRC            = './assets/sass/style.scss'; // Path to main .scss file.
