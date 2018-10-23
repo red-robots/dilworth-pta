@@ -1514,11 +1514,11 @@ a{text-decoration:none}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
 .page-links{clear:both;margin:0 0 1.5em}
 .simcal-event-title{font-size:18px;font-weight:300}
-section.blue-banner{background-color:#002d62;overflow:hidden;padding:20px 0;color:#fff;font-size:18px;font-weight:300}
+section.blue-banner{background-color:#0093b2;overflow:hidden;padding:20px 0;color:#fff;font-size:18px;font-weight:300}
 section.blue-banner .intro{width:100%;float:left}
 @media screen and (min-width:600px){section.blue-banner .intro{width:13%;margin:0 1% 0 0}
 }section.blue-banner .envolved{width:100%;float:left}
-section.blue-banner .envolved a{background-color:#0093b2;border:#0093b2 1px solid;padding:5%;display:inline-block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.blue-banner .envolved a{background-color:#006f51;border:1px solid #006f51;padding:5%;display:inline-block;color:#fff;overflow:hidden;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.blue-banner .envolved a:hover{border:#fff 1px solid}
 section.blue-banner .envolved.first{margin:0 2.5% 0 0}
 section.blue-banner .envolved.last{margin:0}
@@ -1566,7 +1566,7 @@ section.blue-banner .envolved p{margin:0;font-size:13px}
 .button-volunteer{width:148px;height:50px;position:relative;float:right;margin:0;background-image:url(images/but-volunteer.png);background-repeat:no-repeat}
 .button-volunteer a{width:148px;height:50px;display:block;text-indent:-9000px}
 .view-cal{width:auto;margin:10px auto;text-align:center}
-#quick-links{background-color:#0093b2;padding:25px;width:100%;float:left;margin:20px 0 0 0}
+#quick-links{background-color:#006f51;padding:25px;width:100%;float:left;margin:20px 0 0 0}
 #quick-links ul,#quick-links li{margin:0;padding:0}
 #quick-links li{list-style:none}
 #quick-links h2{width:100%;margin:-0 0 20px 0;padding:5px 0;display:block;float:left;color:#fff;text-transform:uppercase;text-align:center}
