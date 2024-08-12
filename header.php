@@ -61,8 +61,8 @@
     <div id="sociallinks">
     <p>Stay Connected: </p>
         <ul>
-        	<li class="twitter"><a href="<?php the_field('facebook_link', 'option'); ?>" target="_blank">Facebook</a></li>
-            <li class="facebook"><a href="<?php the_field('twitter_link', 'option'); ?>" target="_blank">Twitter</a></li>
+        	<li class="twitter"><a href="https://www.facebook.com/dilworthelementary" target="_blank">Facebook</a></li>
+            <li class="facebook"><a href="https://www.instagram.com/dilworthpta/?hl=en" target="_blank">Instagram</a></li>
         </ul>
     </div><!-- sociallinks -->
     
