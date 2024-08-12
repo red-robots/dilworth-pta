@@ -32,8 +32,8 @@
 	  <div class="icon"><i class="fa fa-facebook fa-3x" aria-hidden="true">
 	    <a target="_blank" href="<?php echo $facebook; ?>">Facebook</a>
 	  </i></div>
-	  <div class="icon"><i class="fa fa-twitter fa-3x" aria-hidden="true">
-	     <a target="_blank" href="<?php echo $twitter; ?>">Twitter</a>
+	  <div class="icon"><i class="fa fa-instagram fa-3x" aria-hidden="true">
+	     <a target="_blank" href="https://www.instagram.com/dilworthpta/?hl=en">Instagram</a>
 	  </i></div>
 	  <div class="icon"><i class="fa fa-calendar-o fa-3x" aria-hidden="true">
 	     <a href="<?php echo $calendar; ?>">Calendar</a>
