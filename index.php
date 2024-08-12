@@ -116,43 +116,7 @@ wp_reset_postdata();
 
 
 <div class="home-box">
-<h2>In The News</h2>
-<div class="clear"></div>
-<?php 
-$args = array(
-'post_type' => 'post',
-'posts_per_page' => '2'
-);
-$the_query = new WP_Query( $args ); ?>
-<?php if ( $the_query->have_posts() ) : ?>
-<?php while ( $the_query->have_posts() ) : ?>
-<?php $the_query->the_post(); ?>
-
-<?php //the_excerpt(); ?>
-<div class="news-blurb">
-<a href="<?php the_permalink(); ?>">
-<div class="blurb-date"><?php echo get_the_date(); ?></div>
-<h3><?php the_title(); ?> &raquo;</h3>
-<?php echo get_excerpt(80); ?>
-</a>
-</div><!-- news blurb -->
-
-<!--<div class="inthenews-readmore"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></div>	-->
-
-<?php endwhile; ?>
-<?php endif; // end have_posts() check ?>
-<?php wp_reset_postdata(); ?>
-</div><!-- home-box -->
-
-
-
-<div class="home-box">
-<h2>Facebook</h2>
-<div class="clear"></div>
-<?php //echo do_shortcode('[minitwitter id="492307712277872641" username="selwynpta" limit=2]');  ?>
-<?php echo do_shortcode('[custom-facebook-feed]');  ?>
-
-
+<?php echo do_shortcode('[instagram-feed]'); ?>
 </div><!-- home-box -->
 
 </div><!-- col -->
